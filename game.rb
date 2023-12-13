@@ -11,7 +11,7 @@ class Game
         current_player = @player1
 
         while @player1.lives > 0 && @player2.lives > 0
-            question = Question.new
+            question = Question.new(current_player.name)
             question.ask
 
             player_answer = gets.chomp.to_i
